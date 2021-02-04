@@ -1,1 +1,45 @@
-<h1> will be seasonal stysles </h1>
+
+
+<html> 
+    <head>
+        <title> jQuery test page </title>
+        <script src="https://code.jquery.com/jquery-latest.js"> </script>
+     </head>
+    <body>
+        <h1> jQuery test page </h1>
+        <div id="myDiv">This is my div!</div>
+            <ul>
+                <li>Im a list item!</>
+                <li>Im a list item!</>
+                <li>Im a list item!</>
+                <li>Im a list item!</>
+                <li>Im a list item!</>
+            </ul>
+
+        </div>
+        <script>
+            $(function () {
+            //alert("This IS jQuery!");
+            
+           /* $("div#myDiv") .css("border","2px solid red');
+            $("div#myDiv") .css("border","2px solid red');
+            $("div#myDiv") .css("border","2px solid red');
+            $("div#myDiv") .fadeout();
+            */
+                    $("div#myDiv").css("border", "2px solid red");
+                    $("div#myDiv").css("background-color", "yellow");
+                    $("div#myDiv").append(" This gets added to the div!");
+
+                    /* $("div#myDiv li:even").css("background", "aqua").slideDown(2000); */
+                    $("div#myDiv").hide().slideDown(1000, function () {
+
+                        $("div#myDiv li").each(function () {
+                            $("div#myDiv li:even").css("background", "red").slideDown(2000);
+                        })
+
+                    });
+                });
+           // alert("this is not jQuery)
+        </script>
+    </body>
+</html>
